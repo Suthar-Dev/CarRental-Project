@@ -26,7 +26,6 @@ def insert_values():#(TO ADD VALUES INTO TABLE)
  if opt.upper()=='A':#TO ADD CAR DETAILS
  print()
  clr.write('\t >>Insert Car Details<<\n',"KEYWORD")
-Page | 11
  cp=input("\t Enter Plate Number: ")
  c_ptno = cp.upper()
  typ=input("\t Enter Type: ")
@@ -61,7 +60,6 @@ Page | 11
  c_ptno = cpt.upper()
  q = "select status from cars where car_ptno = '"+c_ptno+"'"
  cur.execute(q)
-Page | 12
  data = cur.fetchone()
  if data[0] == 'Not Available' or data[0] == 'Crashed':
  return c_ptno,2
@@ -94,7 +92,6 @@ def Search_CarType(a):
 status = 'Available'"
  cur.execute(query)
  data = cur.fetchall()
-Page | 13
  return data
 def Search_Company(a):
  query="select type,company,model,rent from cars where company = '"+str(a)+"' and \
@@ -129,7 +126,6 @@ def Search_ModelStaff(a):
  q="select * from cars where model = '"+str(a)+"'"
  cur.execute(q)
  data = cur.fetchall()
-Page | 14
  return data
 def Search_RentStaff(a,b):
  q="select * from cars where rent between '"+a+"' and '"+b+"'"
